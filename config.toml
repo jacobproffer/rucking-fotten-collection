@@ -1,0 +1,21 @@
+baseURL = "https://tickets.proffer.dev/"
+languageCode = "en-us"
+title = "Rucking Fotten Collection"
+theme = "rucking-fotten"
+
+[taxonomies]
+  style = "styles"
+  size = "sizes"
+
+[params]
+  description = "The ongoing Rucking Fotten collection of Jacob Proffer, started in 2019."
+
+[menus]
+
+  [[menu.main]]
+    name = "Sizes"
+    pageRef = "/sizes/"
+
+  [[menu.main]]
+    name = "Styles"
+    pageRef = "/styles/"

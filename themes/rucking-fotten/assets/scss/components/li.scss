@@ -1,0 +1,22 @@
+.list {
+  &__item {
+    --item-spacing: 40px;
+    padding-bottom: var(--item-spacing);
+    margin-bottom: var(--item-spacing);
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__detailed-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__permalink {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+.visually-hide {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+  clip: rec(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+.unstyled-list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

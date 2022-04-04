@@ -1,0 +1,10 @@
+name = "Rucking Fotten"
+description = "Source code for Jacob Proffer's Rucking Fotten project."
+homepage = "https://github.com/jacobproffer/rucking-fotten-collection"
+tags = ["collection", "shirts"]
+features = ["data", "grid"]
+min_version = "0.94.2"
+
+[author]
+  name = "Jacob Proffer"
+  homepage = "https://proffer.dev/"

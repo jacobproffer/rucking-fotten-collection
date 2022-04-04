@@ -1,0 +1,26 @@
+<header class="site-header">
+
+  <a href="/">Logo Here</a>
+
+  <nav aria-label="primary">
+    <ul class="unstyled-list site-header__list">
+
+      {{ $currentPage := . }}
+
+      {{ range .Site.Menus.main }}
+        <li class="site-header__list-item">
+          <a
+            href="{{ .URL }}"
+            {{ if $currentPage.IsMenuCurrent "main" . }}
+              aria-current="page"
+            {{ end }}
+          >
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+
+    </ul>
+  </nav>
+
+</header>

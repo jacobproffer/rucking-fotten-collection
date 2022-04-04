@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+  <main id="content">
+
+    <h1>{{ .Title }}</h1>
+
+    <p>{{ len .Site.RegularPages }} shirts</p>
+
+    <ul class="unstyled-list list">
+
+      {{ range .Site.RegularPages }}
+
+        {{ .Render "li" }}
+
+      {{ end }}
+
+    </ul>
+
+  </main>
+
+{{ end }}
