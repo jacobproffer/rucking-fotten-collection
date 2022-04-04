@@ -1,4 +1,4 @@
-baseURL = "https://tickets.proffer.dev/"
+baseURL = "https://rf-collection-dev.netlify.app/"
 languageCode = "en-us"
 title = "Rucking Fotten Collection"
 theme = "rucking-fotten"
