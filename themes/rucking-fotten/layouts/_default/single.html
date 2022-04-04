@@ -1,104 +1,110 @@
+{{ define "title" }}
+
+  {{ .Title }} - {{ .Site.Title }}
+
+{{ end }}
+
 {{ define "main" }}
 
-<main>
-  <article>
+  <main>
+    <article>
 
-    <h1>{{ .Title }}</h1>
+      <h1>{{ .Title }}</h1>
 
-    {{ if isset .Params "variant" }}
+      {{ if isset .Params "variant" }}
 
-      <dl class="list__detailed-list grid">
-
-        <div>
-          <dt><strong>Edition</strong></dt>
-          <dd>{{ .Params.variant }}</dd>
-        </div>
-
-        {{ if isset .Params "styles" }}
-
-          {{ $styledHeadline := "Style" }}
-
-          {{ if gt (len .Params.styles) 1 }}
-
-            {{ $styledHeadline = $styledHeadline | pluralize }}
-
-          {{ end }}
+        <dl class="list__detailed-list grid">
 
           <div>
-            <dt><strong>{{ $styledHeadline }}</strong></dt>
+            <dt><strong>Edition</strong></dt>
+            <dd>{{ .Params.variant }}</dd>
+          </div>
+
+          {{ if isset .Params "styles" }}
+
+            {{ $styledHeadline := "Style" }}
 
             {{ if gt (len .Params.styles) 1 }}
 
-              <dd>
-                <ul class="unstyled-list">
-
-                  {{ range .Params.styles }}
-
-                    <li>
-                      {{ . }}
-                    </li>
-
-                  {{ end }}
-
-                </ul>
-              </dd>
-
-            {{ else }}
-
-              {{ range .Params.styles }}
-                <dd>{{ . }}</dd>
-              {{ end }}
+              {{ $styledHeadline = $styledHeadline | pluralize }}
 
             {{ end }}
 
-          </div>
+            <div>
+              <dt><strong>{{ $styledHeadline }}</strong></dt>
 
-        {{ end }}
+              {{ if gt (len .Params.styles) 1 }}
 
-        {{ if isset .Params "sizes" }}
+                <dd>
+                  <ul class="unstyled-list">
 
-          {{ $sizesHeadline := "Size" }}
+                    {{ range .Params.styles }}
 
-          {{ if gt (len .Params.sizes) 1 }}
+                      <li>
+                        {{ . }}
+                      </li>
 
-            {{ $sizesHeadline = $sizesHeadline | pluralize }}
+                    {{ end }}
+
+                  </ul>
+                </dd>
+
+              {{ else }}
+
+                {{ range .Params.styles }}
+                  <dd>{{ . }}</dd>
+                {{ end }}
+
+              {{ end }}
+
+            </div>
 
           {{ end }}
 
-          <div>
-            <dt><strong>{{ $sizesHeadline }}</strong></dt>
+          {{ if isset .Params "sizes" }}
+
+            {{ $sizesHeadline := "Size" }}
 
             {{ if gt (len .Params.sizes) 1 }}
 
-              <dd>
-                <ul class="unstyled-list">
-
-                  {{ range .Params.sizes }}
-                    <li>
-                      {{ . }}
-                    </li>
-                  {{ end }}
-
-                </ul>
-              </dd>
-
-            {{ else }}
-
-              {{ range .Params.sizes }}
-                <dd>{{ . }}</dd>
-              {{ end }}
+              {{ $sizesHeadline = $sizesHeadline | pluralize }}
 
             {{ end }}
 
-          </div>
+            <div>
+              <dt><strong>{{ $sizesHeadline }}</strong></dt>
 
-        {{ end }}
+              {{ if gt (len .Params.sizes) 1 }}
 
-      </dl>
+                <dd>
+                  <ul class="unstyled-list">
 
-    {{ end }}
+                    {{ range .Params.sizes }}
+                      <li>
+                        {{ . }}
+                      </li>
+                    {{ end }}
 
-  </article>
-</main>
+                  </ul>
+                </dd>
+
+              {{ else }}
+
+                {{ range .Params.sizes }}
+                  <dd>{{ . }}</dd>
+                {{ end }}
+
+              {{ end }}
+
+            </div>
+
+          {{ end }}
+
+        </dl>
+
+      {{ end }}
+
+    </article>
+  </main>
 
 {{ end }}
