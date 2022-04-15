@@ -2,19 +2,41 @@
 
   <main id="content">
 
-    <h1>{{ .Title }}</h1>
+    <div class="info-wrap relative">
+      <img src="/images/svg/unhealth-obsession.svg" alt="">
+      <div class="info">
+        <div class="container">
 
-    <p>{{ len .Site.RegularPages }} shirts</p>
+          <div class="info__content">
 
-    <ul class="unstyled-list list">
+            <div class="relative info__heading">
+              <h1>Rucking Fotten Collection</h1>
+            </div>
 
-      {{ range .Site.RegularPages }}
+            <div class="relative info__number">
+              <p class="info__number-grid"><span class="number">{{ len .Site.RegularPages }}</span> shirts</p>
+            </div>
 
-        {{ .Render "li" }}
+          </div>
 
-      {{ end }}
+        </div>
+      </div>
+      <div class="info-wrap__overlay"></div>
+    </div>
 
-    </ul>
+    <div class="list-wrap">
+
+      <ul class="unstyled-list list">
+
+        {{ range .Site.RegularPages }}
+
+          {{ .Render "li" }}
+
+        {{ end }}
+
+      </ul>
+
+    </div>
 
   </main>
 

@@ -1,0 +1,21 @@
+h1,
+h2,
+dt {
+  text-transform: uppercase;
+}
+
+h2 {
+  // 30px at 1440px to 22px at 375px
+  --h2-sizes: clamp(1.38rem, calc(1.20rem + 0.75vw), 1.88rem);
+  margin: 0;
+  font-size: var(--h2-sizes);
+}
+
+dt {
+  margin-bottom: 10px;
+}
+
+dt,
+dd {
+  font-size: .875rem;
+}

@@ -1,6 +1,6 @@
 baseURL = "https://rf-collection-dev.netlify.app/"
 languageCode = "en-us"
-title = "Rucking Fotten Collection"
+title = "Unhealthy Obsession"
 theme = "rucking-fotten"
 
 [taxonomies]

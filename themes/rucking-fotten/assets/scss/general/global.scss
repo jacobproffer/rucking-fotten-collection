@@ -1,7 +1,17 @@
 :root {
-  --black: #14141b;
-  --white: #f8f8f2;
-  --container: 1440px;
+  --black: #000;
+  --white: #fff;
+  --border: rgba(255, 255, 255, .2);
+  --gold: #fea55d;
+
+  --container: 1340px;
+
+  // 40px at 1800px to 20px at 375px
+  --outer-spacing: clamp(1.25rem, calc(0.81rem + 1.88vw), 2.50rem);
+
+  @include screen-below($desktop-sm) {
+    --container: 1100px;
+  }
 }
 
 *,
@@ -22,8 +32,10 @@ html {
 }
 
 body {
-  position: relative;
   margin: 0;
+  color: var(--white);
+  background-color: var(--black);
+  font-family: 'Manrope', sans-serif;
   font-size: 16px;
 }
 

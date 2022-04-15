@@ -32,3 +32,120 @@
   justify-content: center;
   align-items: center;
 }
+
+.number {
+  --number-font-size: clamp(3.125rem, 4.7vw + 2rem, 6.25rem);
+  color: var(--gold);
+  font-size: var(--number-font-size);
+}
+
+.info-wrap {
+  padding: 75px 0;
+  overflow: hidden;
+
+  &__overlay {
+    --radius: clamp(15.63rem, calc(-8.93rem + 44.64vw), 31.25rem);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: calc(100% - 40px);
+    height: 100%;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: var(--white);
+    border-radius: var(--radius) 0 0 var(--radius);
+    pointer-events: none;
+
+    &::after,
+    &::before {
+      position: absolute;
+      right: 0;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      width: 538px;
+      height: 12px;
+      content: "";
+    }
+
+    &::after {
+      top: -12px;
+    }
+
+    &::before {
+      bottom: -12px;
+    }
+  }
+}
+
+.info {
+  margin-top: 42px;
+  border-top: 6px solid var(--white);
+  border-bottom: 6px solid var(--white);
+
+  h1 {
+    font-size: .875rem;
+    font-weight: 400;
+  }
+
+  &__heading,
+  &__number {
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading {
+    order: 2;
+    justify-content: end;
+  }
+
+  &__number-grid {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+  }
+
+  &__number {
+    order: 1;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    width: 225px;
+    height: 450px;
+    pointer-events: none;
+    content: "";
+  }
+
+  &::after {
+    left: 0;
+    background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    transform: scale(-1);
+  }
+
+  &::before {
+    right: 0;
+    background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 6px;
+      height: 100%;
+      background-color: var(--white);
+      transform: translateX(-50%);
+      content: "";
+    }
+  }
+}
