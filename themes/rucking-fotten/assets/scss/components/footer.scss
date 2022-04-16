@@ -1,0 +1,5 @@
+.site-footer {
+  --footer-top-spacing: clamp(3.44rem, calc(-11.79rem + 27.68vw), 13.13rem);
+  --footer-bottom-spacing: clamp(5.31rem, calc(-3.04rem + 15.18vw), 10.63rem);
+  padding: var(--footer-top-spacing) 0 var(--footer-bottom-spacing);
+}

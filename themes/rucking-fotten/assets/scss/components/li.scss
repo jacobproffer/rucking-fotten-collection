@@ -1,11 +1,9 @@
 .list-wrap {
   padding: 0 var(--outer-spacing);
+  margin-top: clamp(3.13rem, calc(-1.79rem + 8.93vw), 6.25rem);
 }
 
 .list {
-  display: grid;
-  row-gap: 1px;
-
   &__item {
     // 70px at 1800px to 35px at 375px
     --list-item-spacing: clamp(2.19rem, calc(1.42rem + 3.29vw), 4.38rem);
@@ -14,7 +12,6 @@
   }
 
   &__item-article {
-    display: grid;
     grid-template-columns: .9fr 2fr;
     gap: clamp(1.56rem, calc(-15.62rem + 31.25vw), 12.50rem);
 
@@ -24,7 +21,6 @@
   }
 
   &__detailed-list {
-    display: grid;
     grid-template-columns: 1fr 1fr 6ch;
     column-gap: 20px;
   }

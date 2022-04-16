@@ -10,7 +10,11 @@
   --outer-spacing: clamp(1.25rem, calc(0.81rem + 1.88vw), 2.50rem);
 
   @include screen-below($desktop-sm) {
-    --container: 1100px;
+    --container: 1000px;
+  }
+
+  @include screen-below($laptop) {
+    --container: 880px;
   }
 }
 
@@ -22,7 +26,7 @@
 
 * {
   &:focus {
-    outline: 2px dotted var(--black);
+    outline: 2px dotted var(--white);
   }
 }
 
@@ -40,13 +44,10 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
 }
 
 a {
   color: inherit;
-}
-
-dd {
-  margin: 0;
 }

@@ -1,0 +1,140 @@
+.hero {
+  --hero-spacing-top: clamp(7.00rem, calc(-4.00rem + 20.00vw), 14.00rem);
+  --hero-padding: clamp(2.38rem, calc(-1.26rem + 6.61vw), 4.69rem);
+  padding: var(--hero-padding) 0;
+  margin-top: var(--hero-spacing-top);
+
+  &__graphic {
+    top: calc(var(--hero-spacing-top) * -1);
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+  }
+
+  &__info {
+    margin-top: 42px;
+    border-top: 6px solid var(--white);
+    border-bottom: 6px solid var(--white);
+
+    &::after,
+    &::before {
+      --gradient-size: clamp(7.00rem, calc(-4.00rem + 20.00vw), 14.00rem);
+      position: absolute;
+      top: 0;
+      width: var(--gradient-size);
+      height: 100%;
+      pointer-events: none;
+      content: "";
+    }
+
+    &::after {
+      left: 0;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      transform: scale(-1);
+    }
+
+    &::before {
+      right: 0;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+
+  &__headline {
+    font-size: .875rem;
+    font-weight: 400;
+  }
+
+  &__heading,
+  &__number {
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading {
+    order: 2;
+
+    @include screen-above($tablet) {
+      justify-content: end;
+    }
+  }
+
+  &__number {
+    order: 1;
+
+    @include screen-below($tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__number-grid {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+
+    @include screen-above($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 6px;
+        height: 100%;
+        background-color: var(--white);
+        transform: translateX(-50%);
+        content: "";
+      }
+    }
+
+    @include screen-below($tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__overlay {
+    --radius: clamp(15.63rem, calc(-8.93rem + 44.64vw), 31.25rem);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: calc(100% - 40px);
+    height: 100%;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    border-color: var(--white);
+    border-radius: var(--radius) 0 0 var(--radius);
+    pointer-events: none;
+
+    @include screen-below($tablet) {
+      --radius: 0;
+      width: 100%;
+      border-width: 6px 0;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      right: 0;
+      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      width: 538px;
+      height: 6px;
+      content: "";
+    }
+
+    &::after {
+      top: -6px;
+    }
+
+    &::before {
+      bottom: -6px;
+    }
+  }
+}

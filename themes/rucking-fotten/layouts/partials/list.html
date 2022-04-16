@@ -1,0 +1,15 @@
+<section class="list-wrap">
+
+  <h2 class="visually-hide">The Shirts</h2>
+
+  <ul class="unstyled-list list">
+
+    {{ range .Site.RegularPages }}
+
+      {{ .Render "li" }}
+
+    {{ end }}
+
+  </ul>
+
+</section>

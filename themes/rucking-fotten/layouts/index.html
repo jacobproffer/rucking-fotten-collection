@@ -2,41 +2,9 @@
 
   <main id="content">
 
-    <div class="info-wrap relative">
-      <img src="/images/svg/unhealth-obsession.svg" alt="">
-      <div class="info">
-        <div class="container">
+    {{ partial "hero" . }}
 
-          <div class="info__content">
-
-            <div class="relative info__heading">
-              <h1>Rucking Fotten Collection</h1>
-            </div>
-
-            <div class="relative info__number">
-              <p class="info__number-grid"><span class="number">{{ len .Site.RegularPages }}</span> shirts</p>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="info-wrap__overlay"></div>
-    </div>
-
-    <div class="list-wrap">
-
-      <ul class="unstyled-list list">
-
-        {{ range .Site.RegularPages }}
-
-          {{ .Render "li" }}
-
-        {{ end }}
-
-      </ul>
-
-    </div>
+    {{ partial "list" . }}
 
   </main>
 
