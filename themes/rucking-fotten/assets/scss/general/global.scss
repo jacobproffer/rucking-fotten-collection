@@ -40,6 +40,11 @@
   }
 }
 
+::selection {
+  color: var(--gold);
+  background-color: var(--black);
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
