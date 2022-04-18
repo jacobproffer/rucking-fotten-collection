@@ -1,26 +1,13 @@
-<header class="site-header">
+<header class="site-header uppercase" id="site-header">
+  <div class="container container--standard">
 
-  <a href="/">Logo Here</a>
+    <div class="site-header__grid relative grid">
 
-  <nav aria-label="primary">
-    <ul class="unstyled-list site-header__list">
+      <a class="site-header__title" href="/">{{ .Site.Title }}</a>
 
-      {{ $currentPage := . }}
+      <a class="site-header__external-link" href="https://proffer.dev/">Built by Jacob Proffer</a>
 
-      {{ range .Site.Menus.main }}
-        <li class="site-header__list-item">
-          <a
-            href="{{ .URL }}"
-            {{ if $currentPage.IsMenuCurrent "main" . }}
-              aria-current="page"
-            {{ end }}
-          >
-            {{ .Name }}
-          </a>
-        </li>
-      {{ end }}
+    </div>
 
-    </ul>
-  </nav>
-
+  </div>
 </header>
