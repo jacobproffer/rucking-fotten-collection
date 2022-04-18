@@ -34,7 +34,8 @@
 }
 
 .number {
-  --number-font-size: clamp(3.125rem, 4.7vw + 2rem, 6.25rem);
+  // 100px at 880px to 50px at 880px
+  --number-font-size: clamp(3.125rem, 8.9vw - 1.8rem, 6.25rem);
   color: var(--gold);
   font-size: var(--number-font-size);
 }

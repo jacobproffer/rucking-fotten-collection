@@ -5,8 +5,8 @@ dt {
 }
 
 h3 {
-  // 30px at 1440px to 22px at 375px
-  --h3-sizes: clamp(1.38rem, calc(1.20rem + 0.75vw), 1.88rem);
+  // 30px at 1440px to 22px at 880px
+  --h3-sizes: clamp(1.38rem, 1.4vw + 0.6rem, 1.875rem);
   margin: 0;
   font-size: var(--h3-sizes);
 }

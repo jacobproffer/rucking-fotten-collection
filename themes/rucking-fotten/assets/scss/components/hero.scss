@@ -1,5 +1,7 @@
 .hero {
+  // 224px at 1440px to 112px at 880px
   --hero-spacing-top: clamp(7.00rem, calc(-4.00rem + 20.00vw), 14.00rem);
+  // 75px at 1440px to 38px at 880px
   --hero-padding: clamp(2.38rem, calc(-1.26rem + 6.61vw), 4.69rem);
   padding: var(--hero-padding) 0;
   margin-top: var(--hero-spacing-top);
@@ -18,6 +20,7 @@
 
     &::after,
     &::before {
+      // 224px at 1440px to 112 at 880px
       --gradient-size: clamp(7.00rem, calc(-4.00rem + 20.00vw), 14.00rem);
       position: absolute;
       top: 0;
@@ -29,13 +32,13 @@
 
     &::after {
       left: 0;
-      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      background: var(--gradient);
       transform: scale(-1);
     }
 
     &::before {
       right: 0;
-      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      background: var(--gradient);
     }
   }
 
@@ -99,7 +102,8 @@
   }
 
   &__overlay {
-    --radius: clamp(15.63rem, calc(-8.93rem + 44.64vw), 31.25rem);
+    // 500px at 1440px to 250px at 880px
+    --radius: clamp(18.75rem, calc(-13.17rem + 58.04vw), 39.06rem);
     position: absolute;
     top: 50%;
     right: 0;
@@ -121,10 +125,12 @@
 
     &::after,
     &::before {
+      // 538px at 1440px to 270px at 880px
+      --overlay-gradient-width: clamp(20.25rem, calc(-13.98rem + 62.23vw), 42.03rem);
       position: absolute;
       right: 0;
-      background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-      width: 538px;
+      background: var(--gradient);
+      width: var(--overlay-gradient-width);
       height: 6px;
       content: "";
     }

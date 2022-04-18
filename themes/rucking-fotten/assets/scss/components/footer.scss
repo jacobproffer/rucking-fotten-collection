@@ -1,6 +1,7 @@
 .site-footer {
   // 208px at 1440px to 104px at 880px
   --footer-top-spacing: clamp(6.50rem, calc(-3.71rem + 18.57vw), 13.00rem);
+  // 170px at 1440px to 85px at 880px
   --footer-bottom-spacing: clamp(5.31rem, calc(-3.04rem + 15.18vw), 10.63rem);
   flex-direction: column;
   padding: var(--footer-top-spacing) 0 var(--footer-bottom-spacing);
