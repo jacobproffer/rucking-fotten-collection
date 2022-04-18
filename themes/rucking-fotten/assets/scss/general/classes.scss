@@ -47,3 +47,7 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.page-spacing {
+  padding: var(--hero-spacing-top) 0 0;
+}

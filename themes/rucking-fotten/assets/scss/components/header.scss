@@ -7,7 +7,7 @@
   z-index: 9;
   width: 100%;
   height: auto;
-  padding: var(--header-padding) 0;
+  padding: var(--header-padding) var(--outer-spacing);
   background-color: transparent;
   transition: padding .25s ease-in-out, transform .25s ease-in-out;
   will-change: transform;
@@ -22,6 +22,10 @@
     opacity: var(--header-opacity);
     transition: opacity 300ms ease-in-out;
     content: "";
+
+    @include screen-below($desktop) {
+      --header-opacity: 1;
+    }
   }
 
   &.unpinned {
@@ -29,9 +33,13 @@
   }
 
   &.pinned {
-    --header-opacity: 1;
-    padding: 38px 0;
+    padding-top: 38px;
+    padding-bottom: 38px;
     transform: translateY(0);
+
+    @include screen-above($desktop) {
+      --header-opacity: 1;
+    }
   }
 
   &__grid {

@@ -12,6 +12,9 @@
   // 40px at 1800px to 20px at 375px
   --outer-spacing: clamp(1.25rem, calc(0.81rem + 1.88vw), 2.50rem);
 
+  // 224px at 1440px to 112px at 880px
+  --hero-spacing-top: clamp(7.00rem, calc(-4.00rem + 20.00vw), 14.00rem);
+
   @include screen-below($desktop) {
     --container: 1000px;
   }
