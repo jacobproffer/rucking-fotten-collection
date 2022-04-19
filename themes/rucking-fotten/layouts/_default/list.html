@@ -1,31 +1,11 @@
-{{ define "title" }}
-
-  {{ .Title }} - {{ .Site.Title }}
-
-{{ end }}
-
 {{ define "main" }}
 
   <main id="content">
-    <article>
 
-      <h1>{{ .Title }}</h1>
+    {{ partial "hero" . }}
 
-      <section>
+    {{ partial "list" . }}
 
-        <ul class="unstyled-list list">
-
-          {{ range .Pages }}
-
-            {{ .Render "li" }}
-
-          {{ end }}
-
-        </ul>
-
-      </section>
-
-    </article>
   </main>
 
 {{ end }}

@@ -45,7 +45,9 @@
             {{ else }}
 
               {{ range .Params.styles }}
+
                 <dd>{{ . }}</dd>
+
               {{ end }}
 
             {{ end }}
@@ -73,9 +75,13 @@
                 <ul class="unstyled-list">
 
                   {{ range .Params.sizes }}
+
                     <li>
+
                       {{ . }}
+
                     </li>
+
                   {{ end }}
 
                 </ul>
@@ -84,7 +90,9 @@
             {{ else }}
 
               {{ range .Params.sizes }}
+
                 <dd>{{ . }}</dd>
+
               {{ end }}
 
             {{ end }}
@@ -96,8 +104,6 @@
       </dl>
 
     {{ end }}
-
-    <a class="absolute list__permalink" href="{{ .Permalink }}" aria-label="View {{ .Title }}"></a>
 
   </article>
 
