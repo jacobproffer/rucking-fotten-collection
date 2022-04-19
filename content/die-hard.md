@@ -1,6 +1,6 @@
 ---
 title: "Die Hard"
-variant: "Timed"
+variant: "Bill Clay"
 styles: ["Long-Sleeved"]
 sizes: ["Small"]
 ---
