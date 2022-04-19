@@ -1,0 +1,25 @@
+.four-oh-four {
+  padding-right: var(--outer-spacing);
+  padding-left: var(--outer-spacing);
+  margin-bottom: 40px;
+
+  p {
+    max-width: 80ch;
+    line-height: 1.8;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__wrap {
+    padding: var(--hero-spacing-top) 0 200px;
+  }
+
+  &__image {
+    margin-bottom: var(--outer-spacing);
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: var(--outer-spacing);
+  }
+}

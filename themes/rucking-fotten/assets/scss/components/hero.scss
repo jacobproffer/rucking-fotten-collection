@@ -12,35 +12,6 @@
     margin-top: var(--hero-spacing-top);
   }
 
-  &__graphic {
-    top: calc(var(--hero-spacing-top) * -1);
-    left: 50%;
-    z-index: -2;
-    width: clamp(45.00rem, calc(-2.14rem + 85.71vw), 75.00rem);
-    height: clamp(28.50rem, calc(-1.36rem + 54.29vw), 47.50rem);
-    transform: translateX(-50%);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    &::before {
-      // 200px at 1440px to 150px at 880px
-      --graphic-gradient: clamp(9.38rem, calc(4.46rem + 8.93vw), 12.50rem);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 300px;
-      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-      transition: opacity 300ms ease-in-out;
-      opacity: var(--hero-gradient-opacity);
-      content: "";
-    }
-  }
-
   &__info {
     margin-top: 42px;
     border-top: 6px solid var(--white);
