@@ -83,9 +83,10 @@
 
   &__heading {
     order: 2;
+    text-align: right;
 
     @include screen-above($tablet) {
-      justify-content: end;
+      justify-self: end;
     }
   }
 
