@@ -1,6 +1,6 @@
 ---
-title: "Nosferatu"
-variant: "Timed"
+title: "Street Trash"
+variant: "Movie Gang"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

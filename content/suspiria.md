@@ -1,6 +1,6 @@
 ---
-title: "It"
+title: "Suspiria"
 variant: "Timed"
-styles: ["Short-Sleeved"]
+styles: ["Long-Sleeved"]
 sizes: ["Medium"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Nosferatu"
-variant: "Timed"
+title: "Battle Royale"
+variant: "Keiko's Smile"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

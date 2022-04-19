@@ -1,6 +1,6 @@
 ---
-title: "Nosferatu"
-variant: "Timed"
+title: "Heat"
+variant: "Grim Reaper"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Nosferatu"
-variant: "Timed"
+title: "New Nightmare"
+variant: "Convention"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Nosferatu"
-variant: "Timed"
+title: "Dawn of the Dead"
+variant: "Black"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---
