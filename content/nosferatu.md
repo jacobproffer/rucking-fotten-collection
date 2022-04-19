@@ -1,6 +1,6 @@
 ---
 title: "Nosferatu"
 variant: "Timed"
-styles: ["Short-Sleeved", "Long-Sleeved"]
+styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Candy Man"
-variant: "Sweets for the Sweet"
+variant: "Timed"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---

@@ -2,19 +2,9 @@
 
   <main id="content">
 
-    <h1>{{ .Title }}</h1>
+    {{ partial "hero" . }}
 
-    <p>{{ len .Site.RegularPages }} shirts</p>
-
-    <ul class="unstyled-list list">
-
-      {{ range .Site.RegularPages }}
-
-        {{ .Render "li" }}
-
-      {{ end }}
-
-    </ul>
+    {{ partial "list" . }}
 
   </main>
 

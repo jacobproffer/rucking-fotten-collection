@@ -1,6 +1,6 @@
 baseURL = "https://rf-collection-dev.netlify.app/"
 languageCode = "en-us"
-title = "Rucking Fotten Collection"
+title = "Unhealthy Obsession"
 theme = "rucking-fotten"
 
 [taxonomies]
@@ -9,6 +9,7 @@ theme = "rucking-fotten"
 
 [params]
   description = "The ongoing Rucking Fotten collection of Jacob Proffer, started in 2019."
+  images = ["/images/social.jpg"]
 
 [menus]
 
