@@ -10,13 +10,3 @@ theme = "rucking-fotten"
 [params]
   description = "The ongoing Rucking Fotten collection of Jacob Proffer, started in 2019."
   images = ["/images/social.jpg"]
-
-[menus]
-
-  [[menu.main]]
-    name = "Sizes"
-    pageRef = "/sizes/"
-
-  [[menu.main]]
-    name = "Styles"
-    pageRef = "/styles/"
