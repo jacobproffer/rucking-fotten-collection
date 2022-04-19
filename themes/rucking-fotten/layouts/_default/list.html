@@ -2,10 +2,16 @@
 
   <main id="content">
 
-    {{ partial "hero" . }}
+    {{ partial "home/hero" . }}
 
-    {{ partial "list" . }}
+    {{ partial "home/list" . }}
 
   </main>
+
+{{ end }}
+
+{{ define "footer" }}
+
+  {{ partial "home/footer" }}
 
 {{ end }}

@@ -1,6 +1,6 @@
 ---
 title: "Bride of Frankenstein"
-variant: "Timed"
+variant: "Movie Gang"
 styles: ["Short-Sleeved"]
 sizes: ["Small"]
 ---
