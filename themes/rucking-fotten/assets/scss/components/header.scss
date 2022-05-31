@@ -56,11 +56,12 @@
     position: fixed;
     top: -10rem;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%);
     transition: top .25s ease-in-out;
 
     &:focus {
-      top: 0;
+      top: 5rem;
     }
   }
 }

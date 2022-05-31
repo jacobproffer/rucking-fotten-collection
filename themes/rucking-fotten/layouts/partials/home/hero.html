@@ -1,7 +1,48 @@
+{{ $src := resources.Get "/img/graphic.jpg" }}
+{{ $iphonew := default "375x webp" }}
+{{ $smallw := default "720x webp" }}
+{{ $mediumw := default "891x webp" }}
+{{ $tabletw := default "1062x webp" }}
+{{ $largew := default "1200x webp" }}
+
+{{ $data := newScratch }}
+{{ $data.Set "iphone" ($src.Resize $iphonew) }}
+{{ $data.Set "small" ($src.Resize $smallw) }}
+{{ $data.Set "medium" ($src.Resize $mediumw) }}
+{{ $data.Set "tablet" ($src.Resize $tabletw) }}
+{{ $data.Set "large" ($src.Resize $largew) }}
+
+{{ $iphone := $data.Get "iphone" }}
+{{ $small := $data.Get "small" }}
+{{ $medium := $data.Get "medium" }}
+{{ $tablet := $data.Get "tablet" }}
+{{ $large := $data.Get "large" }}
+
 <section class="hero container container--wide" id="top">
   <div class="hero__wrap relative">
     <div class="graphic absolute">
-      <img src="/images/graphic.jpg" alt="">
+
+      <picture>
+        <source media="(max-width: 375px)" srcset="{{with $iphone.RelPermalink }}{{.}}{{ end }}">
+
+        <source media="(max-width: 810px)" srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
+
+        <source media="(max-width: 1080px)" srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
+
+        <source media="(max-width: 1280px)" srcset="{{with $tablet.RelPermalink }}{{.}}{{ end }}">
+
+        <source media="(min-width: 1440px)" srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
+
+        <img
+          class="image-cover"
+          src="{{ $src.RelPermalink }}"
+          width="{{ $src.Width }}"
+          height="{{ $src.Height }}"
+          alt=""
+          aria-hidden="true"
+        >
+      </picture>
+
     </div>
     <img class="hero__title difference" src="/images/svg/unhealth-obsession.svg" alt="Unhealthy Obsession.">
     <div class="hero__info">

@@ -1,5 +1,47 @@
+{{ $src := resources.Get "/img/footer.jpg" }}
+{{ $iphonew := default "375x webp" }}
+{{ $smallw := default "660x webp" }}
+{{ $mediumw := default "880x webp" }}
+{{ $tabletw := default "1000x webp" }}
+{{ $largew := default "1147x webp" }}
+
+{{ $data := newScratch }}
+{{ $data.Set "iphone" ($src.Resize $iphonew) }}
+{{ $data.Set "small" ($src.Resize $smallw) }}
+{{ $data.Set "medium" ($src.Resize $mediumw) }}
+{{ $data.Set "tablet" ($src.Resize $tabletw) }}
+{{ $data.Set "large" ($src.Resize $largew) }}
+
+{{ $iphone := $data.Get "iphone" }}
+{{ $small := $data.Get "small" }}
+{{ $medium := $data.Get "medium" }}
+{{ $tablet := $data.Get "tablet" }}
+{{ $large := $data.Get "large" }}
+
 <footer class="site-footer relative center-content container container--standard">
   <a class="site-footer__link uppercase weight-bold" href="#top">Back to top</a>
-  <img class="absolute site-footer__graphic" src="/images/footer.jpg" alt="">
-  <img class="difference" src="/images/svg/back-to-top.svg" alt="">
+
+  <picture>
+    <source media="(max-width: 375px)" srcset="{{with $iphone.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(max-width: 1200px)" srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(max-width: 1380px)" srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(max-width: 1799px)" srcset="{{with $tablet.RelPermalink }}{{.}}{{ end }}">
+
+    <source media="(min-width: 1800px)" srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
+
+    <img
+      class="absolute site-footer__graphic"
+      src="{{ $src.RelPermalink }}"
+      width="{{ $src.Width }}"
+      height="{{ $src.Height }}"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+    >
+  </picture>
+
+  <img class="difference" src="/images/svg/back-to-top.svg" alt="" loading="lazy">
 </footer>

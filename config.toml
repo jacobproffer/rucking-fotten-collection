@@ -2,6 +2,7 @@ baseURL = "https://rf-collection-dev.netlify.app/"
 languageCode = "en-us"
 title = "Unhealthy Obsession"
 theme = "rucking-fotten"
+enableRobotsTXT = true
 
 [taxonomies]
   style = "styles"
