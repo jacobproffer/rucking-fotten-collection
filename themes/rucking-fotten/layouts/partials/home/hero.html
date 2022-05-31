@@ -1,8 +1,8 @@
 {{ $src := resources.Get "/img/graphic.jpg" }}
 {{ $iphonew := default "375x webp" }}
-{{ $smallw := default "618x webp" }}
-{{ $mediumw := default "720x webp" }}
-{{ $tabletw := default "890x webp" }}
+{{ $smallw := default "720x webp" }}
+{{ $mediumw := default "891x webp" }}
+{{ $tabletw := default "1062x webp" }}
 {{ $largew := default "1200x webp" }}
 
 {{ $data := newScratch }}
@@ -25,13 +25,13 @@
       <picture>
         <source media="(max-width: 375px)" srcset="{{with $iphone.RelPermalink }}{{.}}{{ end }}">
 
-        <source media="(max-width: 480px)" srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
+        <source media="(max-width: 810px)" srcset="{{with $small.RelPermalink }}{{.}}{{ end }}">
 
-        <source media="(max-width: 880px)" srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
+        <source media="(max-width: 1080px)" srcset="{{with $medium.RelPermalink }}{{.}}{{ end }}">
 
-        <source media="(max-width: 1080px)" srcset="{{with $tablet.RelPermalink }}{{.}}{{ end }}">
+        <source media="(max-width: 1280px)" srcset="{{with $tablet.RelPermalink }}{{.}}{{ end }}">
 
-        <source media="(min-width: 1200px)" srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
+        <source media="(min-width: 1440px)" srcset="{{with $large.RelPermalink }}{{.}}{{ end }}">
 
         <img
           class="image-cover"
